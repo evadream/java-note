@@ -1,4 +1,4 @@
-package com.momo.setinel;/*
+package com.momo.sentinel;/*
  * Copyright (C) 2009-2017 Hangzhou 2Dfire Technology Co., Ltd.All rights reserved
  */
 
@@ -8,7 +8,6 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
-import com.momo.setinel.sevice.HelloService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +30,7 @@ public class SentinelTest {
             try {
                 entry = SphU.entry("HelloWorld");
                 // 资源中的逻辑.
-                HelloService.sayHello();
+//                HelloConsumerService.sayHello();
                 Thread.sleep(10);
             } catch (BlockException e1) {
                 System.out.println("blocked!");

@@ -1,6 +1,7 @@
-package com.momo.setinel;/*
+/*
  * Copyright (C) 2009-2017 Hangzhou 2Dfire Technology Co., Ltd.All rights reserved
  */
+package com.momo.dubbo.provider;
 
 /**
  * IHelloService
@@ -10,6 +11,7 @@ package com.momo.setinel;/*
  * desc：
  */
 public interface IHelloService {
+    String sayHello();
 }
 
     
