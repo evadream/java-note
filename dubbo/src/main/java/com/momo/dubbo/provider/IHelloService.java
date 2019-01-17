@@ -12,6 +12,8 @@ package com.momo.dubbo.provider;
  */
 public interface IHelloService {
     String sayHello();
+
+    String sayHello(String word);
 }
 
     

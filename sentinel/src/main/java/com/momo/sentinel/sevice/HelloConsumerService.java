@@ -14,13 +14,17 @@ import org.springframework.stereotype.Component;
  * @date 2019/1/12
  * desc：
  */
-@Component
+@Component("helloConsumerService")
 public class HelloConsumerService {
     @Reference
     private IHelloService helloService;
 
     public String geyHello() {
         return helloService.sayHello();
+    }
+
+    public String geyHello(String word) {
+        return helloService.sayHello(word);
     }
 }
 

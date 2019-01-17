@@ -6,6 +6,7 @@ package com.momo.dubbo.config;
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ConsumerConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.dubbo.config.spring.AnnotationBean;
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -41,6 +42,13 @@ public class DubboConfiguration {
         ConsumerConfig consumerConfig = new ConsumerConfig();
         // consumerConfig.setFilter("-sentinel.dubbo.consumer.filter");
         return consumerConfig;
+    }
+
+    @Bean
+    public AnnotationBean annotationBean() {
+        AnnotationBean annotationBean = new AnnotationBean();
+        annotationBean.setPackage("com.momo.dubbo");
+        return annotationBean;
     }
 }
 

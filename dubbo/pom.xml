@@ -41,20 +41,34 @@
             <artifactId>zkclient</artifactId>
             <version>0.9</version>
         </dependency>
-        <!--sentinel 限流-->
+        <!--sentinel限流-->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-zookeeper</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+        <!--与控制台通讯包-->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-transport-simple-http</artifactId>
             <version>1.4.1</version>
         </dependency>
+        <!--dubbo 接入插件-->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-dubbo-adapter</artifactId>
             <version>1.4.1</version>
         </dependency>
+        <!--sentinel注解-->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-annotation-aspectj</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+        <!--热点流控包-->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-parameter-flow-control</artifactId>
             <version>1.4.1</version>
         </dependency>
         <!--<dependency>-->

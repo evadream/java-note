@@ -8,6 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * SentinelApplication
  *
@@ -21,8 +24,19 @@ public class SentinelApplication {
         SpringApplication springApplication = new SpringApplication(SentinelApplication.class);
         ConfigurableApplicationContext context = springApplication.run(args);
         HelloConsumerService helloConsumerService = context.getBean(HelloConsumerService.class);
+
+        List<String> words = new ArrayList<>();
+        words.add("+++++++++++++++++++++++++++++");
+        words.add("----------------------------");
+        int i = 0;
         while (true) {
-            System.out.println(helloConsumerService.geyHello());
+            try {
+                System.out.println(System.currentTimeMillis() + helloConsumerService.geyHello(words.get(i % 2)));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            i++;
+//            break;
         }
     }
 

@@ -4,7 +4,6 @@ package com.momo.dubbo;/*
 
 import com.momo.dubbo.provider.IHelloService;
 import com.momo.dubbo.provider.service.HelloService;
-import com.momo.dubbo.provider.service.SayBeyService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -18,18 +17,14 @@ public class DemoApplication {
 
     public static void main(String[] args) throws Exception {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com.momo.dubbo");
-
+        //注册的dubbo服务
         IHelloService helloService = context.getBean(HelloService.class);
         System.out.println(helloService.sayHello());
-        IHelloService sayHello = context.getBean(HelloService.class);
-        while (true) {
-            System.out.println(sayHello.sayHello());
+        synchronized (DemoApplication.class) {
+            while (true) {
+                DemoApplication.class.wait();
+            }
         }
-//        synchronized (DemoApplication.class) {
-//            while (true) {
-//                DemoApplication.class.wait();
-//            }
-//        }
 
     }
 

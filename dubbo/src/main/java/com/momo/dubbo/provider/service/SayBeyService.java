@@ -14,13 +14,19 @@ import org.springframework.stereotype.Component;
  * @date 2019/1/10
  * desc：
  */
-//@Component
-//@Service
+@Component
+@Service
 public class SayBeyService implements IHelloService {
     @Override
     public String sayHello() {
         return "泰迪就是狗啊，有啥疑问么？？？";
     }
+
+    @Override
+    public String sayHello(String word) {
+        return "SayBeyService: " + word;
+    }
+
 }
 
     
