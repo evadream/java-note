@@ -31,7 +31,7 @@ public class SentinelApplication {
         int i = 0;
         while (true) {
             try {
-                System.out.println(System.currentTimeMillis() + helloConsumerService.geyHello(words.get(i % 2)));
+                System.out.println(System.currentTimeMillis() + helloConsumerService.getSayBey(words.get(i % 2)));
             } catch (Exception e) {
                 e.printStackTrace();
             }

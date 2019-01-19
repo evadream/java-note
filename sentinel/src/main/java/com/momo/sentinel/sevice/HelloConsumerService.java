@@ -5,6 +5,7 @@ package com.momo.sentinel.sevice;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.momo.dubbo.provider.IHelloService;
+import com.momo.dubbo.provider.ISayBeyService;
 import org.springframework.stereotype.Component;
 
 /**
@@ -18,6 +19,8 @@ import org.springframework.stereotype.Component;
 public class HelloConsumerService {
     @Reference
     private IHelloService helloService;
+    @Reference
+    private ISayBeyService sayBeyService;
 
     public String geyHello() {
         return helloService.sayHello();
@@ -25,6 +28,10 @@ public class HelloConsumerService {
 
     public String geyHello(String word) {
         return helloService.sayHello(word);
+    }
+
+    public String getSayBey(String word) {
+        return sayBeyService.sayHello(word);
     }
 }
 

@@ -17,7 +17,7 @@
     <bytecodeTargetLevel>
       <module name="dubbo" target="1.8" />
       <module name="java-note" target="1.5" />
-      <module name="jdk" target="1.5" />
+      <module name="jdk" target="1.6" />
       <module name="rocketmq" target="1.5" />
       <module name="sentinel" target="1.8" />
       <module name="spring" target="1.5" />

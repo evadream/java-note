@@ -3,7 +3,9 @@ package com.momo.dubbo;/*
  */
 
 import com.momo.dubbo.provider.IHelloService;
+import com.momo.dubbo.provider.ISayBeyService;
 import com.momo.dubbo.provider.service.HelloService;
+import com.momo.dubbo.provider.service.SayBeyService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -20,6 +22,8 @@ public class DemoApplication {
         //注册的dubbo服务
         IHelloService helloService = context.getBean(HelloService.class);
         System.out.println(helloService.sayHello());
+        ISayBeyService sayBeyService = context.getBean(SayBeyService.class);
+        System.out.println(sayBeyService.sayHello());
         synchronized (DemoApplication.class) {
             while (true) {
                 DemoApplication.class.wait();

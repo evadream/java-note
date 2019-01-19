@@ -4,8 +4,7 @@
 package com.momo.dubbo.provider.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.momo.dubbo.provider.IHelloService;
-import org.springframework.stereotype.Component;
+import com.momo.dubbo.provider.ISayBeyService;
 
 /**
  * SayBeyService
@@ -14,9 +13,8 @@ import org.springframework.stereotype.Component;
  * @date 2019/1/10
  * desc：
  */
-@Component
 @Service
-public class SayBeyService implements IHelloService {
+public class SayBeyService implements ISayBeyService {
     @Override
     public String sayHello() {
         return "泰迪就是狗啊，有啥疑问么？？？";
@@ -24,7 +22,7 @@ public class SayBeyService implements IHelloService {
 
     @Override
     public String sayHello(String word) {
-        return "SayBeyService: " + word;
+        return "泰迪就是狗啊，有啥疑问么？？？: " + word;
     }
 
 }
