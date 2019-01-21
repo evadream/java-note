@@ -8,7 +8,7 @@
         <version>2.1.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>groupId</groupId>
+    <groupId>com.momo</groupId>
     <artifactId>sentinel</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>demo</name>
