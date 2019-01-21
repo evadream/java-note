@@ -1,6 +1,16 @@
 # dubbo服务远程调用
+dubbo 的服务调用分为：
+1. 本地调用
+2. 远程调用
+
+相比远程调用，本地调用的实现会简单很多，因为调用的服务，就在本地进程内，且不存在多个，所以不需要集群容错和网络通信相关的功能。
+
+远程服务调用时序图大致如下：
+![dubbo-远程服务调用](https://img-blog.csdnimg.cn/2019012116423079.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1kxODYzMDI0Njc5MzE5NDUzMA==,size_16,color_FFFFFF,t_70)
+
  在调用dubbo服务时发现执行方法时实际上调用的是invoker的代理类，那么这个代理类是怎么生成的呢？
 ![invoker handler](https://img-blog.csdnimg.cn/20190119134228836.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1kxODYzMDI0Njc5MzE5NDUzMA==,size_16,color_FFFFFF,t_70)
+
  本文讲下使用dubbo注解方式（**@Reference**）的服务引用过程
 
 ## 示例
