@@ -6,6 +6,7 @@ package com.momo.sentinel.config;
 import com.alibaba.csp.sentinel.annotation.aspectj.SentinelResourceAspect;
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ConsumerConfig;
+import com.alibaba.dubbo.config.ProviderConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.config.spring.AnnotationBean;
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
@@ -41,8 +42,15 @@ public class DubboConfig {
     @Bean
     public ConsumerConfig consumerConfig() {
         ConsumerConfig consumerConfig = new ConsumerConfig();
+        consumerConfig.setFilter("myTest");
         return consumerConfig;
     }
+//    @Bean
+//    public ProviderConfig providerConfig(){
+//        ProviderConfig providerConfig = new ProviderConfig();
+//        providerConfig.setFilter("myTest");
+//        return providerConfig;
+//    }
 
     @Bean
     public AnnotationBean annotationBean() {

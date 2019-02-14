@@ -17,12 +17,12 @@ import com.momo.dubbo.provider.ISayBeyService;
 public class SayBeyService implements ISayBeyService {
     @Override
     public String sayHello() {
-        return "泰迪就是狗啊，有啥疑问么？？？";
+        return "SayBeyService";
     }
 
     @Override
     public String sayHello(String word) {
-        return "泰迪就是狗啊，有啥疑问么？？？: " + word;
+        return "SayBeyService" + word;
     }
 
 }

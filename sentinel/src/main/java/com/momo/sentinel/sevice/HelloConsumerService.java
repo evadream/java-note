@@ -22,7 +22,7 @@ public class HelloConsumerService {
     @Reference
     private ISayBeyService sayBeyService;
 
-    public String geyHello() {
+    public String getHello() {
         return helloService.sayHello();
     }
 

@@ -15,7 +15,7 @@
 
     <modules>
         <module>dubbo</module>
-        <module>jdk</module>
+        <module>java-learn</module>
         <module>spring</module>
         <module>rocketmq</module>
         <module>zookeeper</module>

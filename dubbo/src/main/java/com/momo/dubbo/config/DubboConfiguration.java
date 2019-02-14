@@ -5,6 +5,7 @@ package com.momo.dubbo.config;
 
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ConsumerConfig;
+import com.alibaba.dubbo.config.ProviderConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.config.spring.AnnotationBean;
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
@@ -25,7 +26,7 @@ public class DubboConfiguration {
     public RegistryConfig registryConfig() {
         RegistryConfig registryConfig = new RegistryConfig();
         registryConfig.setAddress("zookeeper://localhost:2181");
-        registryConfig.setProtocol("zookeeper");
+        registryConfig.setProtocol("testDubbo");
         registryConfig.setPort(20881);
         return registryConfig;
     }
@@ -41,7 +42,15 @@ public class DubboConfiguration {
     public ConsumerConfig consumerConfig() {
         ConsumerConfig consumerConfig = new ConsumerConfig();
         // consumerConfig.setFilter("-sentinel.dubbo.consumer.filter");
+//        consumerConfig.setFilter("myFilter");
         return consumerConfig;
+    }
+
+    @Bean
+    public ProviderConfig providerConfig(){
+        ProviderConfig providerConfig = new ProviderConfig();
+//        providerConfig.setFilter("myFilter");
+        return providerConfig;
     }
 
     @Bean

@@ -3,8 +3,6 @@
  */
 package com.momo.jdk;
 
-import java.util.List;
-
 /**
  * JDKMain
  *

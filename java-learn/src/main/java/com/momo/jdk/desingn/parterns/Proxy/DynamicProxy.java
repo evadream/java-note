@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2009-2017 Hangzhou 2Dfire Technology Co., Ltd.All rights reserved
  */
-package com.momo.jdk.Proxy;
+package com.momo.jdk.desingn.parterns.Proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

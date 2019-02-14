@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="dubbo" />
+        <module name="java-learn" />
+        <module name="java相关" />
         <module name="jdk" />
         <module name="rocketmq" />
         <module name="sentinel" />
@@ -17,7 +19,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="dubbo" target="1.8" />
+      <module name="java-learn" target="1.8" />
       <module name="java-note" target="1.5" />
+      <module name="java相关" target="1.8" />
       <module name="jdk" target="1.6" />
       <module name="rocketmq" target="1.5" />
       <module name="sentinel" target="1.8" />
