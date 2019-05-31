@@ -21,12 +21,25 @@ public class TestPacking {
 
         Long l3 = 3L;
 
+        System.out.println(c.equals(d));
         System.out.println(c == d);
-        System.out.println(e == f);//为啥这个不等于？？
+        System.out.println(e == f);
         System.out.println(c == (a + b));
-        System.out.println(c.equals(a + b));//为啥这两句都为true？？？
+        System.out.println(c.equals(a + b));
         System.out.println(l3.equals(a + b));
         System.out.println(l3 == (a + b));
+
+        String s1 = "abc";
+        String s2 = "abc";
+        String s3 = new String("abc");
+        String s4 = new String ("abc");
+        String s5 = "a";
+
+        System.out.println(s1==s2);//true
+        System.out.println(s1==s3); //false
+        System.out.println(s3==s4);//fasle
+        System.out.println(s1==("a"+"bc")); //true
+        System.out.println(s1==(s5+"bc"));//true
     }
 
 }
