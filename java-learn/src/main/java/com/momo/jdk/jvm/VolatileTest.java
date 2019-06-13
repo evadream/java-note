@@ -3,6 +3,8 @@
  */
 package com.momo.jdk.jvm;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * VolatileTest
  *
@@ -12,12 +14,15 @@ package com.momo.jdk.jvm;
  */
 public class VolatileTest {
 
-    public static volatile int test = 0;
+    public static volatile AtomicInteger test = new AtomicInteger(0);
     public static volatile int test1 = 1;
 
 
     public static void increase() {
-        test++;
+        //非线程安全
+//        test1++;
+        //线程安全
+        test.incrementAndGet();
     }
 
     private static final int THREADS_COUNT = 200;
