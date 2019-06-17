@@ -10,6 +10,7 @@
         <module name="java-learn" />
         <module name="java相关" />
         <module name="jdk" />
+        <module name="mysql" />
         <module name="rocketmq" />
         <module name="sentinel" />
         <module name="spring" />
@@ -23,6 +24,7 @@
       <module name="java-note" target="1.5" />
       <module name="java相关" target="1.8" />
       <module name="jdk" target="1.6" />
+      <module name="mysql" target="1.5" />
       <module name="rocketmq" target="1.5" />
       <module name="sentinel" target="1.8" />
       <module name="spring" target="1.5" />

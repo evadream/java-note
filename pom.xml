@@ -21,6 +21,7 @@
         <module>zookeeper</module>
         <module>sentinel</module>
         <module>tools</module>
+        <module>mysql</module>
     </modules>
 
     <profiles>

@@ -21,7 +21,7 @@ import java.util.HashMap;
  *
  * @author huangtao
  * @date 2019/5/14
- * desc：
+ * desc：计算文件差异
  */
 public class DiffUtil {
     class DiffItem {
