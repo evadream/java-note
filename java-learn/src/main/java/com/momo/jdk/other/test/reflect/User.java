@@ -3,16 +3,19 @@
  */
 package com.momo.jdk.other.test.reflect;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NonNull;
+import lombok.Setter;
 
 /**
  * User
  *
- * @author huangtao
+ * @author
  * @date 2019/6/17
  * desc：
  */
-@Data
+@Data(staticConstructor="of")
 public class User<T> {
 
     private static String DESCRIBE_String = "test_user";
@@ -30,7 +33,7 @@ public class User<T> {
     private String mobile;
     private short sex;
 
-    public T testThrowException(T generalType) throws NumberFormatException {
+    public T testThrowException(@NonNull T generalType) throws NumberFormatException {
         return generalType;
     }
 }

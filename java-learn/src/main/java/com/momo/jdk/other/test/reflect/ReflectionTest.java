@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 public class ReflectionTest {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchFieldException {
-        User user = new User();
+        User user = User.of();
         user.setName("lili");
         user.setAge(1);
         user.setMobile("123456789");
